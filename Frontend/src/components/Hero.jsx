@@ -1,5 +1,6 @@
 import React from 'react'
 import ecommerceImage from '../assets/ecommerce.jpg';
+import { Link } from 'react-router-dom';
 
 
 const Hero = () => {
@@ -11,7 +12,10 @@ const Hero = () => {
         <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Shop the Best, Forget the Rest!</h1>
         <p class="lead">"Explore our wide range of products, curated just for you. Quality, style, and convenience - all in one place."</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-          <button type="button" class="btn btn-dark btn-lg px-4 me-md-2">All Products</button>
+        <Link to="/all-products">
+          <a className="btn btn-dark btn-lg px-4 me-md-2"> All Products</a>
+          </Link>
+
         </div>
       </div>
       <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
