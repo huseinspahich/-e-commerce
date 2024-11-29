@@ -1,0 +1,133 @@
+
+
+const allProducts = [
+    {
+      name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+      category: "women",
+      image: "/images/product_1.png",
+      new_price: 56.0,
+      old_price: 69.0,
+    },
+    {
+      name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+      category: "women",
+      image: "/images/product_2.png",
+      new_price: 45.0,
+      old_price: 56.5,
+    },
+    {
+      name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+      category: "women",
+      image: "/images/product_3.png",
+      new_price: 64.0,
+      old_price: 82.5,
+    },
+    {
+      name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+      category: "women",
+      image: "/images/product_4.png",
+      new_price: 67.0,
+      old_price: 74.0,
+    },
+    {
+      name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+      category: "women",
+      image: "/images/product_5.png",
+      new_price: 56.0,
+      old_price: 67.5,
+    },
+    {
+      name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+      category: "women",
+      image: "/images/product_6.png",
+      new_price: 80.0,
+      old_price: 83.5,
+    },
+    {
+      name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+      category: "women",
+      image: "/images/product_7.png",
+      new_price: 33.0,
+      old_price: 56.5,
+    },
+    {
+      name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+      category: "women",
+      image: "/images/product_8.png",
+      new_price: 36.0,
+      old_price: 50.0,
+    },
+    {
+      name: "Men Green Sol Zippered Full-Zip Slim Fit Bomber Jacket",
+      category: "men",
+      image: "/images/product_13.png",
+      new_price: 29.0,
+      old_price: 35.5,
+    },
+    {
+      name: "Men Green Sol Zippered Full-Zip Slim Fit Bomber Jacket",
+      category: "men",
+      image: "/images/product_14.png",
+      new_price: 85.0,
+      old_price: 120.5,
+    },
+    {
+      name: "Men Green Sol Zippered Full-Zip Slim Fit Bomber Jacket",
+      category: "men",
+      image: "/images/product_15.png",
+      new_price: 25.0,
+      old_price: 30.0,
+    },
+    {
+      name: "Men Green Sol Zippered Full-Zip Slim Fit Bomber Jacket",
+      category: "men",
+      image: "/images/product_16.png",
+      new_price: 35.0,
+      old_price: 40.5,
+    },
+    {
+      name: "Men Green Sol Zippered Full-Zip Slim Fit Bomber Jacket",
+      category: "men",
+      image: "/images/product_17.png",
+      new_price: 43.0,
+      old_price: 50.5,
+    },
+    {
+      name: "Men Green Sol Zippered Full-Zip Slim Fit Bomber Jacket",
+      category: "men",
+      image: "/images/product_18.png",
+      new_price: 58.0,
+      old_price: 76.5,
+    },
+    {
+      name: "Boys Orange Colourblocked Hooded Sweatshirt",
+      category: "kids",
+      image: "/images/product_25.png",
+      new_price: 85.0,
+      old_price: 100.0,
+    },
+    {
+      name: "Boys Orange Colourblocked Hooded Sweatshirt",
+      category: "kids",
+      image: "/images/product_26.png",
+      new_price: 35.0,
+      old_price: 50.5,
+    },
+    {
+      name: "Boys Orange Colourblocked Hooded Sweatshirt",
+      category: "kids",
+      image: "/images/product_27.png",
+      new_price: 85.0,
+      old_price: 120.5,
+    },
+    {
+      name: "Boys Orange Colourblocked Hooded Sweatshirt",
+      category: "kids",
+      image: "/images/product_28.png",
+      new_price: 85.0,
+      old_price: 110.0,
+    },
+  ];
+  
+  export default allProducts;
+  
