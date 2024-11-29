@@ -5,7 +5,7 @@ const MenPopular = () => {
     <div>
       <div className="px-4 py-5 my-5 text-center">
         <h1 className="display-5 border-bottom d-inline border-3 border-dark text-body-emphasis">
-          POPULAR IN MEN
+          BEST SELLERS
         </h1>
         <div className="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
           <button type="button" className="btn btn-dark btn-lg px-4 gap-3">
