@@ -98,7 +98,7 @@ const Footer = () => {
           </section>
         </div>
 
-        <div className="footer-content">
+        <div className="footer-content p-0">
           <div>
        
           </div>

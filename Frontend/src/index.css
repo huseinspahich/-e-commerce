@@ -1,0 +1,63 @@
+/* Footer će biti pozicioniran na dnu, ali samo kad sadržaj nije dovoljno dug */
+.footer-content {
+    position: relative; /* Daje slobodu footeru da se pomiče u skladu sa sadržajem */
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--highlight-color);
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    min-height: 50px;
+    color: white;
+    padding: 10px 0; /* Dodaj malo prostora u footer */
+  }
+  
+  /* Ovaj div unutar footera postaviću na maksimalnu širinu */
+  .footer-content > div {
+    width: 100%;
+    max-width: 1200px; /* Možeš prilagoditi maksimalnu širinu prema potrebi */
+    text-align: center; /* Središnju poravnanje */
+  }
+  
+  .author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #gh-link {
+    text-decoration: none;
+    color: var(--font-medium);
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  #gh-logo {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #gh-link:hover #gh-logo {
+    transform: rotate(360deg) scale(1.2);
+  }
+  
+  /* Ako sadržaj stranice nije dug, footer će biti fiksiran na dnu */
+  body, html {
+    height: 100%; /* Postavljanje visine stranice */
+    margin: 0;
+  }
+  
+  main {
+    min-height: 100%; /* Glavni sadržaj neka zauzme minimalnu visinu 100% */
+    padding-bottom: 70px; /* Daj malo prostora da footer ne bude preblizu */
+  }
+  body {
+    margin-top: 20px;
+  }
+  

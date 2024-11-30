@@ -64,105 +64,84 @@ a:link{
     transform: scale(1.1); 
   }
   .newsletter {
-    padding: 80px 0;
-    background: #f2f2f2;
-    }
-    
-    .newsletter .content {
-    max-width: 650px;
-    margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 50px 0;
     text-align: center;
-    position: relative;
-    z-index: 2; }
-    .newsletter .content h2 {
-    color: #243c4f;
-    margin-bottom: 40px; }
-    .newsletter .content .form-control {
-    height: 50px;
-    border-color: #ffffff;
-    border-radius:0;
-    }
-    .newsletter .content.form-control:focus {
-    box-shadow: none;
-    border: 2px solid #243c4f;
-    }
-    .newsletter .content .btn {
-    min-height: 50px; 
-    border-radius:0;
-    background: #243c4f;
-    color: #fff;
-    font-weight:600;
-    }
+  }
+  
+  .newsletter-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .newsletter-subtitle {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  .newsletter .input-group {
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  .newsletter input.form-control {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+  }
+  
+  .newsletter .btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color:black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  
 /* Postavljanje osnovnog stila za footer sadržaj */
-.footer-content {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: var(--highlight-color); /* Postavi svoju boju za pozadinu */
-  font-family: 'Outfit', sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  min-height: 50px;
-  color:black;
-  position: relative;
-  padding: 10px 0;
-  margin-top: auto;
-}
-
-.footer-content > div {
-  width: 250px;
-}
-
-.div.author {
-  display: flex;
-  justify-content: center;
-}
-
-#gh-link {
-  text-decoration: none;
-  letter-spacing: 0;
-  color: var(--font-medium); /* Postavi boju po želji */
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-  height: 38px;
-}
-
-#gh-logo {
-  width: 35px;
-  height: 35px;
-  margin: 0 10px;
-  transition: transform 0.3s ease-in-out;
-}
-
-#gh-link:hover #gh-logo {
-  transform: rotate(360deg) scale(1.2);
-}
-
-/* Osnovni stilovi za tijelo stranice i pozicioniranje footera na dno */
+/* Osnovni stilovi za tijelo stranice */
 html, body {
-  height: 100%;
+  height: 100%;  /* Osigurava da tijelo stranice zauzima cijeli ekran */
   margin: 0;
-}
-
-body {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  /* Raspored sadržaja u vertikalnom smjeru */
 }
 
+/* Sadržaj stranice */
 .container {
-  flex: 1;
+  flex-grow: 1;  /* Omogućava da sadržaj raste i popuni prostor, gurajući footer prema dolje */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
+/* Footer */
 footer {
   background-color: #fff;
   color: #000;
   padding: 2rem 0;
   border-top: 2px solid #808080;
-  position: relative;
   width: 100%;
-  margin-top: auto; /* Osigurava da footer ide na dno */
+  text-align: center;
+  margin-top: auto;  /* Osigurava da footer ide na dno */
 }
+
+/* Footer content */
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--highlight-color);
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  min-height: 50px;
+  color: black;
+  padding: 10px 0;
+}
+
+/* Smooth transition for hover and focus on buttons */

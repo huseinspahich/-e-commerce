@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../App.css'
+import '../index.css'
 
 
 const AllProducts = () => {
@@ -43,9 +43,8 @@ const AllProducts = () => {
 
             <div class="card-body">
               <p className='fw-semibold mb-0'>{product.name}</p>
-              <p className="card-text mb-1" style={{ fontWeight: "bold", display: "inline-block", marginRight: "10px" }}>${product.new_price}</p>
-              <p className="card-text mb-1" style={{ textDecoration: "line-through", color: "grey", display: "inline-block" }}>${product.old_price}</p>
-
+              <p className="card-text mb-1" style={{ textDecoration: 'line-through' }}>${product.old_price}</p>
+                    <p className="card-text mb-1" style={{ fontWeight: 'bold' }}>${product.new_price}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn btn-dark">Add to cart</button>

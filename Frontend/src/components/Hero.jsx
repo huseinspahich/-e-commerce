@@ -13,8 +13,8 @@ const Hero = () => {
         <p class="lead">"Explore our wide range of products, curated just for you. Quality, style, and convenience - all in one place."</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
         <Link to="/all-products">
-          <a className="btn btn-dark btn-lg px-4 me-md-2"> All Products</a>
-          </Link>
+  <button className="btn btn-dark btn-lg px-4 me-md-2">All Products</button>
+</Link>
 
         </div>
       </div>

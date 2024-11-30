@@ -6,15 +6,17 @@ import Subscribe from './Subscribe'
 import Delivery from './Delivery'
 import Footer from './footer'
 import WomenPopular from './WomenPopular'
+import KidsPopular from './KidsPopular'
 
 const Home = () => {
   return (
     <>
      <Hero/> 
-     <Reviews/>
      <MenPopular/>
-     <WomenPopular/>
      <Subscribe/>
+     <WomenPopular/>
+     <Reviews/>
+     <KidsPopular/>
      <Delivery/>
      <Footer/>
     </>

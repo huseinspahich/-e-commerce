@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../App.css'
+import '../index.css'
 
 
 const AllProducts = () => {
@@ -56,10 +56,8 @@ const AllProducts = () => {
                     />
                     <div className="card-body">
                       <p className="fw-semibold mb-0">{product.name}</p>
-                      <p className="card-text mb-1">${product.new_price}</p>
-                      <p className="card-text mb-1">
-                        <del>${product.old_price}</del>
-                      </p>
+                      <p className="card-text mb-1" style={{ textDecoration: 'line-through' }}>${product.old_price}</p>
+                    <p className="card-text mb-1" style={{ fontWeight: 'bold' }}>${product.new_price}</p>
                       <div className="d-flex justify-content-between align-items-center">
                         <div className="btn-group">
                           <button type="button" className="btn btn-sm btn-dark">

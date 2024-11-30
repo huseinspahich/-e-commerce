@@ -1,29 +1,38 @@
-import React from 'react'
+import React from 'react';
 
 const Subscribe = () => {
   return (
     <>
-      <section class="newsletter">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="content">
-                        <form>
-                            <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
-                            <div class="input-group">
-                                <input type="email" class="form-control" placeholder="Enter your email"/>
-                                <span class="input-group-btn">
-                                    <button class="btn" type="submit">Subscribe Now</button>
-                                </span>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+      <section className="newsletter">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12">
+              <div className="content">
+                <h2 className="newsletter-title">Stay Updated & Save!</h2>
+                <p className="newsletter-subtitle">
+                  Subscribe to our newsletter and get <strong>20% OFF</strong> your next purchase!
+                </p>
+                <form>
+                  <div className="input-group">
+                    <input
+                      type="email"
+                      className="form-control"
+                      placeholder="Enter your email"
+                    />
+                    <span className="input-group-btn">
+                      <button className="btn" type="submit">
+                        Subscribe Now
+                      </button>
+                    </span>
+                  </div>
+                </form>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default Subscribe
+export default Subscribe;
