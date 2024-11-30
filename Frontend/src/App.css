@@ -55,3 +55,114 @@ a:link{
 .shadow-custom {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.9); 
   }
+
+  .card img {
+    transition: transform 0.3s ease; 
+  }
+  
+  .card:hover img {
+    transform: scale(1.1); 
+  }
+  .newsletter {
+    padding: 80px 0;
+    background: #f2f2f2;
+    }
+    
+    .newsletter .content {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2; }
+    .newsletter .content h2 {
+    color: #243c4f;
+    margin-bottom: 40px; }
+    .newsletter .content .form-control {
+    height: 50px;
+    border-color: #ffffff;
+    border-radius:0;
+    }
+    .newsletter .content.form-control:focus {
+    box-shadow: none;
+    border: 2px solid #243c4f;
+    }
+    .newsletter .content .btn {
+    min-height: 50px; 
+    border-radius:0;
+    background: #243c4f;
+    color: #fff;
+    font-weight:600;
+    }
+/* Postavljanje osnovnog stila za footer sadržaj */
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--highlight-color); /* Postavi svoju boju za pozadinu */
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  min-height: 50px;
+  color:black;
+  position: relative;
+  padding: 10px 0;
+  margin-top: auto;
+}
+
+.footer-content > div {
+  width: 250px;
+}
+
+.div.author {
+  display: flex;
+  justify-content: center;
+}
+
+#gh-link {
+  text-decoration: none;
+  letter-spacing: 0;
+  color: var(--font-medium); /* Postavi boju po želji */
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  height: 38px;
+}
+
+#gh-logo {
+  width: 35px;
+  height: 35px;
+  margin: 0 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#gh-link:hover #gh-logo {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* Osnovni stilovi za tijelo stranice i pozicioniranje footera na dno */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer {
+  background-color: #fff;
+  color: #000;
+  padding: 2rem 0;
+  border-top: 2px solid #808080;
+  position: relative;
+  width: 100%;
+  margin-top: auto; /* Osigurava da footer ide na dno */
+}
