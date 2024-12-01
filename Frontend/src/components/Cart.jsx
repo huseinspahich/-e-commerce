@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
+import { useCallback } from 'react';
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -11,16 +13,16 @@ const Cart = () => {
     setCartItems(storedCart);
   }, []);
 
-  const handleQuantityChange = (id, newQuantity) => {
+  const handleQuantityChange = useCallback((id, newQuantity) => {
     if (newQuantity < 1) return; // Prevent negative or zero quantities
-    
+  
     // Ažuriraj količinu proizvoda u korpi
-    const updatedCart = cartItems.map(item => 
+    const updatedCart = cartItems.map(item =>
       item.id === id ? { ...item, quantity: newQuantity } : item
     );
     setCartItems(updatedCart);
     localStorage.setItem('cart', JSON.stringify(updatedCart)); // Ažuriraj localStorage
-  };
+  }, [cartItems, setCartItems]);
 
   const removeFromCart = (id) => {
     const updatedCart = cartItems.filter(item => item.id !== id);
@@ -52,50 +54,53 @@ const Cart = () => {
                           <h3>Your cart is empty!</h3>
                         </div>
                       ) : (
-                        cartItems.map((item, index) => (
-                          <div key={index}>
-                            <div className="row mb-4 d-flex justify-content-between align-items-center">
-                              <div className="col-md-2 col-lg-2 col-xl-2">
-                                <img
-                                  src={`http://localhost:3000${item.image}`}
-                                  className="img-fluid rounded-3"
-                                  alt={item.name}
-                                />
+                        cartItems.map((item, index) => {
+                          if (item === null) return null;  // Check for null pointer references
+                          return (
+                            <div key={index}>
+                              <div className="row mb-4 d-flex justify-content-between align-items-center">
+                                <div className="col-md-2 col-lg-2 col-xl-2">
+                                  <img
+                                    src={`http://localhost:3000${item.image}`}
+                                    className="img-fluid rounded-3"
+                                    alt={item.name}
+                                  />
+                                </div>
+                                <div className="col-md-3 col-lg-3 col-xl-3">
+                                  <h6 className="text-muted">{item.category}</h6>
+                                  <h6 className="mb-0">{item.name}</h6>
+                                </div>
+                                <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                  <button
+                                    className="btn btn-sm btn-light"
+                                    onClick={() => handleQuantityChange(item.id, item.quantity - 1)}
+                                  >
+                                    -
+                                  </button>
+                                  <span className="mx-2">{item.quantity}</span>
+                                  <button
+                                    className="btn btn-sm btn-light"
+                                    onClick={() => handleQuantityChange(item.id, item.quantity + 1)}
+                                  >
+                                    +
+                                  </button>
+                                </div>
+                                <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                                  <h6 className="mb-0">${item.new_price}</h6>
+                                </div>
+                                <div className="col-md-1 col-lg-1 col-xl-1 text-end">
+                                  <button
+                                    className="btn btn-link text-danger"
+                                    onClick={() => removeFromCart(item.id)}
+                                  >
+                                    <i className="fas fa-times"></i>
+                                  </button>
+                                </div>
                               </div>
-                              <div className="col-md-3 col-lg-3 col-xl-3">
-                                <h6 className="text-muted">{item.category}</h6>
-                                <h6 className="mb-0">{item.name}</h6>
-                              </div>
-                              <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                <button
-                                  className="btn btn-sm btn-light"
-                                  onClick={() => handleQuantityChange(item.id, item.quantity - 1)}
-                                >
-                                  -
-                                </button>
-                                <span className="mx-2">{item.quantity}</span>
-                                <button
-                                  className="btn btn-sm btn-light"
-                                  onClick={() => handleQuantityChange(item.id, item.quantity + 1)}
-                                >
-                                  +
-                                </button>
-                              </div>
-                              <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                <h6 className="mb-0">${item.new_price}</h6>
-                              </div>
-                              <div className="col-md-1 col-lg-1 col-xl-1 text-end">
-                                <button
-                                  className="btn btn-link text-danger"
-                                  onClick={() => removeFromCart(item.id)}
-                                >
-                                  <i className="fas fa-times"></i>
-                                </button>
-                              </div>
+                              <hr className="my-4" />
                             </div>
-                            <hr className="my-4" />
-                          </div>
-                        ))
+                          );
+                        })
                       )}
 
                       <div className="pt-5">
@@ -115,13 +120,12 @@ const Cart = () => {
                       <div className="d-flex justify-content-between mb-4">
                         <h5 className="text-uppercase">Items {cartItems.length}</h5>
                         <h5>${calculateTotalPrice()}</h5>
-                      </div>
-                      <button
-                        type="button"
-                        className="btn btn-dark btn-block btn-lg"
-                      >
-                        Checkout
-                      </button>
+                      </div><Link to={{ pathname: '/checkout', state: { totalPrice: calculateTotalPrice() } }}>
+  <button type="button" className="btn btn-dark btn-block btn-lg">
+    Checkout
+  </button>
+</Link>
+
                     </div>
                   </div>
                 </div>
@@ -135,3 +139,4 @@ const Cart = () => {
 };
 
 export default Cart;
+

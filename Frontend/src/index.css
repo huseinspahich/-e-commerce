@@ -60,4 +60,8 @@
   body {
     margin-top: 20px;
   }
-  
+  button:focus,
+button:active {
+    outline: none;
+    box-shadow: none;
+}

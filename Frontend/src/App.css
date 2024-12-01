@@ -145,3 +145,8 @@ footer {
 }
 
 /* Smooth transition for hover and focus on buttons */
+button:focus,
+button:active {
+    outline: none;
+    box-shadow: none;
+}

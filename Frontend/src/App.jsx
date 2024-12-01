@@ -10,6 +10,7 @@ import Women from './components/Women';
 import Kids from './components/Kids';
 import Cart from './components/cart';
 import Register from './components/Register';
+import CheckOut from './components/CheckOut.jsx';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/women" element={<Women />} />
           <Route path="/kids" element={<Kids />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/checkout" element={<CheckOut />} />
         </Routes>
       </BrowserRouter>
     </CartProvider>
