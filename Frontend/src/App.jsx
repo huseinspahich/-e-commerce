@@ -8,7 +8,7 @@ import AllProducts from './components/AllProducts';
 import Men from './components/Men';
 import Women from './components/Women';
 import Kids from './components/Kids';
-import Cart from './components/cart';
+import Cart from './components/Cart';
 import Register from './components/Register';
 import CheckOut from './components/CheckOut.jsx';
 

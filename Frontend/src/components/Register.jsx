@@ -1,16 +1,24 @@
 import React, { useState } from 'react';
 import Footer from './footer';
+import { Link } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
+import Alert from './Alert';
 
 const Register = () => {
   const [fullName, setFullName] = useState('');
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showAlert, setShowAlert] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log({ fullName, username, email, password });
-    // Ovdje možeš dodati logiku za slanje podataka na backend, npr. axios POST request
+    setShowAlert(true);
+    setTimeout(() => {
+      navigate('/login');
+    }, 2000);
   };
 
   return (
@@ -70,10 +78,10 @@ const Register = () => {
                     <div className="form-check d-flex justify-content-start mb-4 p-0">
                       <a href="/login" className="register-link">Already have an account?</a>
                     </div>
-
-                    <button className="btn btn-dark btn-lg btn-block" type="submit">
-                      Sign Up
-                    </button>
+                    <Link to="/login" onClick={handleSubmit} className="btn btn-dark btn-lg btn-block" type="submit">
+                       Sign Up
+                    </Link>
+                    {showAlert && <Alert message="Registered! Please Login" duration={2000} />}
                   </form>
                 </div>
               </div>

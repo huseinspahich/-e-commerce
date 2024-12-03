@@ -7,27 +7,27 @@ const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
-    // Učitavanje podataka iz localStorage pri učitavanju komponente
+  
     const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
-    console.log('Učitani proizvodi iz localStorage:', storedCart);  // Provjeri podatke
+    console.log('Učitani proizvodi iz localStorage:', storedCart);  
     setCartItems(storedCart);
   }, []);
 
   const handleQuantityChange = useCallback((id, newQuantity) => {
-    if (newQuantity < 1) return; // Prevent negative or zero quantities
+    if (newQuantity < 1) return; 
   
-    // Ažuriraj količinu proizvoda u korpi
+    
     const updatedCart = cartItems.map(item =>
       item.id === id ? { ...item, quantity: newQuantity } : item
     );
     setCartItems(updatedCart);
-    localStorage.setItem('cart', JSON.stringify(updatedCart)); // Ažuriraj localStorage
+    localStorage.setItem('cart', JSON.stringify(updatedCart)); 
   }, [cartItems, setCartItems]);
 
   const removeFromCart = (id) => {
     const updatedCart = cartItems.filter(item => item.id !== id);
     setCartItems(updatedCart);
-    localStorage.setItem('cart', JSON.stringify(updatedCart)); // Ažuriraj localStorage
+    localStorage.setItem('cart', JSON.stringify(updatedCart)); 
   };
 
   const calculateTotalPrice = () =>
@@ -105,10 +105,10 @@ const Cart = () => {
 
                       <div className="pt-5">
                         <h6 className="mb-0">
-                          <a href="/all-products" className="text-body">
+                          <Link to="/all-products" className="text-body">
                             <i className="fas fa-long-arrow-alt-left me-2"></i>
                             Back to shop
-                          </a>
+                          </Link>
                         </h6>
                       </div>
                     </div>
@@ -121,10 +121,10 @@ const Cart = () => {
                         <h5 className="text-uppercase">Items {cartItems.length}</h5>
                         <h5>${calculateTotalPrice()}</h5>
                       </div><Link to={{ pathname: '/checkout', state: { totalPrice: calculateTotalPrice() } }}>
-  <button type="button" className="btn btn-dark btn-block btn-lg">
-    Checkout
-  </button>
-</Link>
+                            <button type="button" className="btn btn-dark btn-block btn-lg">
+                              Checkout
+                            </button>
+                            </Link>
 
                     </div>
                   </div>
