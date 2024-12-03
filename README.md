@@ -15,7 +15,7 @@ Follow the instructions below to get local copy up and running.
    ```sh
    npm run dev 
    ```
-   Frontend is running on http://localhost:5173.
+   **Frontend is running on http://localhost:5173.**
       
 5. Install NPM packages for backend
    ```sh
@@ -26,4 +26,4 @@ Follow the instructions below to get local copy up and running.
    ```sh
    node index.js
    ```
-   Backend is running on http://localhost:3000.
+   **Backend is running on http://localhost:3000.**
