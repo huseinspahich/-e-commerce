@@ -1,5 +1,5 @@
 ## Getting Started
-Follow the instructions below to get local copy up and running.
+Follow the instructions below to get local copy up and running.     
 **Some features require a set up of .env file.**
 ### Installation
 1. Clone the repo
