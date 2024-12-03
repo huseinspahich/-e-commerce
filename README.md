@@ -1,7 +1,39 @@
 ## Demonstration
-[Watch Demo Video] https://drive.google.com/file/d/1C0V0lwtRkJQ36E4EMHsG2Kdes9Ak2xqZ/view?usp=drive_link
+***[Watch Demo Video]***     
+https://drive.google.com/file/d/1C0V0lwtRkJQ36E4EMHsG2Kdes9Ak2xqZ/view?usp=drive_link
+#### Home
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4e64a606-d9ea-4174-9792-fdfb5b296b55" alt="Slika 1" width="45%" />
+  <img src="https://github.com/user-attachments/assets/ea76aa18-e069-4b3f-9c6c-7484d4911e20" alt="Slika 2" width="45%" />
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cb4cc9ab-3ebd-4bb9-b77e-87dcde7e406f" alt="Slika 1" width="45%" />
+  <img src="https://github.com/user-attachments/assets/e6e1d8f0-d90a-466a-8edf-b8114cb5ca18" alt="Slika 2" width="45%" />
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/547d5d4a-7b89-43b7-ae2f-0cfbae5c3b24" alt="Slika 1" width="45%" />
+  <img src="https://github.com/user-attachments/assets/288f6acd-4ef8-4395-8d81-633f9a8bfd01" alt="Slika 2" width="45%" />
+</p>     
 
+#### Header and Footer
+###### Main 
+![header](https://github.com/user-attachments/assets/42a51f40-1a3a-4a40-9030-8ba5411b66e5)  
+###### Logged
+![header1](https://github.com/user-attachments/assets/045e325a-e5ea-48fd-b565-b35929705bfa)   
+###### Footer
+![footer](https://github.com/user-attachments/assets/fb9a954b-4239-4580-905b-f4d04a612f5d)   
 
+#### Sign Up and Sing In
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6790d1e2-c898-441b-97f3-b983fa74df2e" alt="Slika 1" width="45%" />
+  <img src="https://github.com/user-attachments/assets/7cf592de-396c-4a3b-9132-5f956d8df146" alt="Slika 2" width="45%" />
+</p>
+
+#### Cart and CheckOut
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/57b9c5c7-7955-4376-99a0-f102c7e92d54" alt="Slika 1" width="45%" />
+  <img src="https://github.com/user-attachments/assets/9af6401a-88fd-4b3b-8ada-c0277f82a1f3" alt="Slika 2" width="45%" />
+</p>
 
 
 ## Getting Started
