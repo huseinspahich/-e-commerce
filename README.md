@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c6ea4077-c876-475c-b295-cc0291f1d51f" alt="E-Commerce App Logo" width="550"/>
+
 # E-Commerce ShopHub
 This repository contains the source code for a full-stack e-commerce application built to deliver a fast and user-friendly shopping experience. The frontend is powered by React.js for dynamic and responsive design, while the backend, built with Node.js and Express.js, ensures smooth server-side functionality. Data is securely managed with PostgreSQL, providing scalability and reliability.  
 The code is divided into 2 main folders:
