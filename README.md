@@ -1,3 +1,9 @@
+# E-Commerce ShopHub
+This repository contains the source code for a full-stack e-commerce application built to deliver a fast and user-friendly shopping experience. The frontend is powered by React.js for dynamic and responsive design, while the backend, built with Node.js and Express.js, ensures smooth server-side functionality. Data is securely managed with PostgreSQL, providing scalability and reliability.  
+The code is divided into 2 main folders:
+- Frontend
+- Backend   
+
 ## Demonstration
 ***[Watch Demo Video]***     
 https://drive.google.com/file/d/1C0V0lwtRkJQ36E4EMHsG2Kdes9Ak2xqZ/view?usp=drive_link   
