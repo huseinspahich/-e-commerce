@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Alert = ({ message, duration }) => {
+const AlertLogin = ({ message, duration }) => {
   const [showAlert, setShowAlert] = useState(true);
 
   useEffect(() => {
@@ -33,4 +33,4 @@ const Alert = ({ message, duration }) => {
   );
 };
 
-export default Alert;
+export default AlertLogin;

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-const MenPopular = () => {
+const MenPopular = ({ isLoggedIn }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -23,9 +24,10 @@ const MenPopular = () => {
           POPULAR IN MEN
         </h1>
         <div className="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
-          <button type="button" className="btn btn-dark btn-lg px-4 gap-3">
-            View All
-          </button>
+        <Link to="/men" className="btn btn-dark btn-lg px-4 gap-3">
+        View All
+            </Link>
+          
         </div>
       </div>
       <div className="album py-5">
@@ -41,7 +43,11 @@ const MenPopular = () => {
                     <p className="card-text mb-1" style={{ fontWeight: 'bold' }}>${product.new_price}</p>
                     <div className="d-flex justify-content-between align-items-center">
                       <div className="btn-group">
-                        <button type="button" className="btn btn-sm btn-dark">Add to cart</button>
+                      {isLoggedIn ? (
+                          <button type="button" className="btn btn-sm btn-dark">Add to cart</button>
+                        ) : (
+                          <p>Please login to add to cart</p>
+                        )}
                       </div>
                     </div>
                   </div>

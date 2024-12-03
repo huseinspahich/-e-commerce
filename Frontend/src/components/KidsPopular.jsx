@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from 'axios'; 
+import { Link } from 'react-router-dom';
 
 const KidsPopular = () => {
   const [products, setProducts] = useState([]);
@@ -23,9 +24,9 @@ const KidsPopular = () => {
           POPULAR IN KIDS
         </h1>
         <div className="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
-          <button type="button" className="btn btn-dark btn-lg px-4 gap-3">
-            View All
-          </button>
+        <Link to="/kids" className="btn btn-dark btn-lg px-4 gap-3">
+        View All
+            </Link>
         </div>
       </div>
       <div className="album py-5">

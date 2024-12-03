@@ -1,14 +1,27 @@
-import React, { useState } from 'react';
-import Footer from './footer';
+import React, { useState,useEffect } from 'react';
+import axios from "axios";
+import { useNavigate } from 'react-router-dom';
+import AlertLogin from './AlertLogin';
 
-const Login = () => {
+const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+  const [showAlert, setShowAlert] = useState(false);
+  useEffect(() => {
+    if (showAlert) {
+      const timer = setTimeout(() => {
+        navigate('/');
+      }, 1000);
+      return () => clearTimeout(timer);
+      
+    }
+  }, [showAlert, navigate]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Spriječava reload stranice pri submitu
-    // Ovdje možeš dodati logiku za slanje podataka na backend, npr. axios POST request
-    console.log({ username, password });
+  const handleSubmit = async (e) => {
+    setShowAlert(true);
+    console.log('Login handleLogin called');
+    onLogin();
   };
 
   return (
@@ -20,7 +33,7 @@ const Login = () => {
               <div className="card shadow-2-strong" style={{ borderRadius: '1rem' }}>
                 <div className="card-body p-5 pb-4 text-center pt-4">
                   <h3 className="mb-5">Sign in</h3>
-                  <form onSubmit={handleSubmit}>
+                  
                     <div className="form-outline mb-4">
                       <input
                         type="email"
@@ -49,10 +62,11 @@ const Login = () => {
                       <a href="/register" className="register-link">Don't have an account?</a>
                     </div>
 
-                    <button className="btn btn-dark btn-lg btn-block" type="submit">
+                    <button onClick={handleSubmit} className="btn btn-dark btn-lg btn-block" type="submit">
                       Sign In
                     </button>
-                  </form>
+                    {showAlert && <AlertLogin message="Welcome back! You have successfully logged in." duration={2000} />}
+              
                   <hr className="my-4" />
                   <a className="btn btn-block" href="/auth/google" role="button">
                     <button className="btn btn-lg btn-outline-secondary btn-block" type="button">

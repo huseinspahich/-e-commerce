@@ -1,10 +1,27 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useCart } from './CartContext'; // Uvozimo useCart hook
+import React, { useState,useEffect } from 'react';
+import { Link, useNavigate  } from 'react-router-dom';
+import { useCart } from './CartContext'; 
 
-function Header() {
-  const { getCartCount } = useCart();  // Dohvatanje broja proizvoda iz CartContext
-  const cartCount = getCartCount();    // Pozivanje funkcije koja vraća ukupan broj proizvoda u korpi
+
+function Header({ isLoggedIn, onLogin }) {
+  const { getCartCount } = useCart();  
+  const cartCount = getCartCount();  
+  const[showLogoutButton, setShowLogoutButton] = useState(false);
+
+  
+  useEffect(() => {
+    if (isLoggedIn) {
+      setTimeout(() => {
+        setShowLogoutButton(true);
+      }, 1000); 
+    } else {
+      setShowLogoutButton(false);
+    }
+  }, [isLoggedIn]);
+
+ 
+
+
 
   return (
     <div className="container">
@@ -23,14 +40,22 @@ function Header() {
         </ul>
 
         <div className="col-md-3 text-end d-flex align-items-center justify-content-end">
-          <Link to="/login" className="nav-link px-2 link-dark me-3">Login</Link>
-
-          <Link to="/cart" className="nav-link px-2 link-dark">
-            <i className="bi-cart-fill me-1"></i>
-            Cart
-            {/* Dinamički broj proizvoda u korpi */}
-            <span className="badge text-dark ms-1 rounded-pill">{cartCount}</span>
-          </Link>
+        {isLoggedIn ? (
+        <button
+          className={`btn btn-outline-dark me-3 ${showLogoutButton ? '' : 'd-none'}`}
+        >
+          <i className="fas fa-sign-out-alt me-2"></i> Logout
+        </button>
+          ) : (
+            <Link to="/login" className="btn btn-outline-dark me-3">
+              <i className="fas fa-sign-in-alt me-2"></i> Login
+            </Link>
+          )}
+          <Link to="/cart" className="btn btn-outline-dark me-3">
+  <i className="bi-cart-fill me-1"></i>
+  Cart
+  <span className="badge text-dark ms-1 rounded-pill">{cartCount}</span>
+</Link>
         </div>
       </header>
     </div>

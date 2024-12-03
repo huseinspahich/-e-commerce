@@ -150,3 +150,14 @@ button:active {
     outline: none;
     box-shadow: none;
 }
+header{
+.btn .badge {
+  position: relative;
+  z-index: 1; /* Postavi veći z-index kako bi se osigurao da badge ostane ispred dugmeta */
+}
+
+.btn:hover .badge {
+  background-color: white; /* Ovisno o tvojoj temi, možeš promijeniti boju kada je dugme aktivno */
+  color: white; /* Osiguraj da tekst bude bijeli kad se nađe u fokusu ili hoveru */
+}  
+}

@@ -8,11 +8,11 @@ import Footer from './footer'
 import WomenPopular from './WomenPopular'
 import KidsPopular from './KidsPopular'
 
-const Home = () => {
+const Home = ({isLoggedIn}) => {
   return (
     <>
      <Hero/> 
-     <MenPopular/>
+     <MenPopular isLoggedIn={isLoggedIn}/>
      <Subscribe/>
      <WomenPopular/>
      <Reviews/>

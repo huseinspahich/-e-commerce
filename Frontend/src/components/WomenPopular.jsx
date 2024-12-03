@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const WomenPopular = () => {
   const [products, setProducts] = useState([]);
@@ -23,9 +24,9 @@ const WomenPopular = () => {
           POPULAR IN WOMEN
         </h1>
         <div className="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
-          <button type="button" className="btn btn-dark btn-lg px-4 gap-3">
-            View All
-          </button>
+        <Link to="/women" className="btn btn-dark btn-lg px-4 gap-3">
+        View All
+            </Link>
         </div>
       </div>
       <div className="album py-5">

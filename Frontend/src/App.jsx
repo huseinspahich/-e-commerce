@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './components/CartContext.jsx';
 import Header from './components/header';
@@ -13,13 +13,25 @@ import Register from './components/Register';
 import CheckOut from './components/CheckOut.jsx';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  console.log('isLoggedIn:', isLoggedIn);
+  const handleLogin = () => {
+    console.log('handleLogin called');
+    setIsLoggedIn(true);
+    const [showLogoutButton, setShowLogoutButton] = useState(false);
+  };
+
+
+
+
   return (
     <CartProvider>  {/* Omotavamo celu aplikaciju sa CartProvider */}
       <BrowserRouter>
-        <Header />
+        <Header isLoggedIn={isLoggedIn} onLogin={handleLogin} />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
+          <Route path="/login" element={<Login onLogin={handleLogin}/>} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/all-products" element={<AllProducts />} />
           <Route path="/men" element={<Men />} />
