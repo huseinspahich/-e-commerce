@@ -1,6 +1,7 @@
 ## Demonstration
 ***[Watch Demo Video]***     
-https://drive.google.com/file/d/1C0V0lwtRkJQ36E4EMHsG2Kdes9Ak2xqZ/view?usp=drive_link
+https://drive.google.com/file/d/1C0V0lwtRkJQ36E4EMHsG2Kdes9Ak2xqZ/view?usp=drive_link   
+     
 #### Home
 <p align="center">
   <img src="https://github.com/user-attachments/assets/4e64a606-d9ea-4174-9792-fdfb5b296b55" alt="Slika 1" width="45%" />
@@ -34,6 +35,7 @@ https://drive.google.com/file/d/1C0V0lwtRkJQ36E4EMHsG2Kdes9Ak2xqZ/view?usp=drive
   <img src="https://github.com/user-attachments/assets/57b9c5c7-7955-4376-99a0-f102c7e92d54" alt="Slika 1" width="45%" />
   <img src="https://github.com/user-attachments/assets/9af6401a-88fd-4b3b-8ada-c0277f82a1f3" alt="Slika 2" width="45%" />
 </p>
+            
 
 
 ## Getting Started
